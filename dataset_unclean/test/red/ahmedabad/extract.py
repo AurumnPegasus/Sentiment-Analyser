@@ -1,6 +1,6 @@
 import GetOldTweets3 as got
 
-tweetCriteria = got.manager.TweetCriteria().setQuerySearch('coronavirus').setSince("2019-11-11").setMaxTweets(2000).setNear("Bangalore, India")
+tweetCriteria = got.manager.TweetCriteria().setQuerySearch('coronavirus').setSince("2019-11-11").setMaxTweets(2000).setNear("Ahmedabad, India")
 f = open('data.txt','a+')
 
 tweets = got.manager.TweetManager.getTweets(tweetCriteria)
