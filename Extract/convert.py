@@ -26,11 +26,8 @@ def convert_dict(tweet_dict, tweet_list):
     return tweets
 
 def write_data(tweets):
-    f = open('data.txt', 'w+')
-    for i in tweets:
-        i = str(i) + "\n"
-        f.write(i)
-    f.close()
+    df = pd.DataFrame(tweets)
+    df.to_csv('data.csv', index=False)
 
 final_data = open('data.txt','a+')
 text_csv = extract_csv_text()
