@@ -24,6 +24,8 @@
 
 * Using wordnet for stemming : https://wordnet.princeton.edu/
 
+* Tweet extraction by ids : https://github.com/DocNow/hydrator
+
 ## Machine Learning 
 
 * Explanation of Bag of Words : http://ataspinar.com/2016/01/21/sentiment-analysis-with-bag-of-words/
