@@ -18,23 +18,21 @@ with open('april28-june6.csv', newline='') as f:
 f = open('data_set.txt', 'w+')
 tweets = []
 c  = 0
+d = 0
 
 for i in data:
     tweet_id = i[0]
+    d+=1
+    print(d)
+    if d == 10000:
+        break
     try:
         tweet = twitter.show_status(id=tweet_id)
-        c+=1
-        print(c)
-        if c == 10000 :
-            break
         text = tweet['text']
         tweets.append([text, i[1]])
+        f.write(str([text, i[1]]) + "\n")
     except:
         pass
 
-for i in tweets:
-    i = str(i)
-    i = i + "\n"
-    f.write(i)
-
+print(len(tweets))
 f.close()
